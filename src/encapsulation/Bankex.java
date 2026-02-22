@@ -1,13 +1,13 @@
 package encapsulation;
 
-class BankAccount{
-    private int accountNumber;
+class BankAccountOld{
+    private final int accountNumber;
     private String accountHolderName;
     private double balance;
     final double rate=5;
     private double interest;
 
-    BankAccount(int accountNumber, String accountHolderName){
+    public BankAccountOld(int accountNumber, String accountHolderName){
         this.accountNumber=accountNumber;
         this.accountHolderName=accountHolderName;
         balance=0;
@@ -54,7 +54,7 @@ class BankAccount{
 
 public class Bankex {
     public static void main(String[] args) {
-        BankAccount acc = new BankAccount(1222,"rahul");
+        BankAccountOld acc = new BankAccountOld(1222,"rahul");
         acc.setBalance(10000);
         acc.setAccountHolderName("raj");
         acc.deposit(1000);
